@@ -8,8 +8,8 @@ export default function Home() {
       <section className="apertura">
         <div className="apertura__fondo">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Scrum_Italy_New_Zealand.jpg/1920px-Scrum_Italy_New_Zealand.jpg"
-            alt="Ocho jugadores formando scrum."
+            src="/portada.jpg"
+            alt="El pack de Las Cañas empujando un scrum contra un rival, con la tribuna detrás."
             fetchPriority="high"
           />
         </div>
@@ -44,8 +44,8 @@ export default function Home() {
       <div className="disciplinas">
         <Link className="disco" id="rugby" href="/#fixture">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/2016_Americas_Rugby_Championship_-_Uruguay_vs_Argentina_XV_-_Scrum.JPG/1280px-2016_Americas_Rugby_Championship_-_Uruguay_vs_Argentina_XV_-_Scrum.JPG"
-            alt="Scrum entre dos equipos."
+            src="/portada.jpg"
+            alt="El pack de Las Cañas formando scrum."
             loading="lazy"
           />
           <h2>Rugby</h2>
@@ -54,8 +54,8 @@ export default function Home() {
         </Link>
         <Link className="disco disco--hockey" id="hockey" href="/#ramas">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Dutch_Women_Hockey_-_Shielding_the_ball.jpg/1280px-Dutch_Women_Hockey_-_Shielding_the_ball.jpg"
-            alt="Jugadora de hockey en acción."
+            src="/hockey.jpg"
+            alt="Una jugadora de hockey del club conduciendo la pelota en césped sintético."
             loading="lazy"
           />
           <h2>Hockey</h2>
@@ -96,7 +96,7 @@ export default function Home() {
               <h2>Hecho de barro y de años</h2>
               <p>
                 En 1978, un grupo de amigos armó su primer equipo al costado de la
-                estación de Cañuelas. Hoy ese mismo predio tiene dos canchas, un quincho
+                estación de Las Cañas. Hoy ese mismo predio tiene dos canchas, un quincho
                 y los sábados llenos de chicos de cinco años y de veteranos que no
                 aprendieron a parar.
               </p>
@@ -118,11 +118,11 @@ export default function Home() {
             </div>
             <figure className="premisa__foto">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/2014-11-14_Test_Match_Italy_-_Argentina_04.jpg/1920px-2014-11-14_Test_Match_Italy_-_Argentina_04.jpg"
-                alt="Jugadores peleando la pelota en un maul."
+                src="/equipo.jpg"
+                alt="Juveniles del club en ronda, charlando antes de jugar."
                 loading="lazy"
               />
-              <figcaption>Foto ilustrativa. Pronto, la foto del plantel 2026.</figcaption>
+              <figcaption>La charla antes del partido, en el predio del club.</figcaption>
             </figure>
           </div>
         </div>

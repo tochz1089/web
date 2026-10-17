@@ -33,7 +33,7 @@ export type Figura = {
 export const resultados: Resultado[] = [
   {
     fecha: "18 oct",
-    local: "Cañuelas",
+    local: "Las Cañas",
     visita: "Old Lions",
     puntos: "28–17",
     torneo: "Primera, torneo Apertura",
@@ -42,14 +42,14 @@ export const resultados: Resultado[] = [
   {
     fecha: "18 oct",
     local: "Arquitectura RC",
-    visita: "Cañuelas",
+    visita: "Las Cañas",
     puntos: "19–26",
     torneo: "Intermedia, torneo Apertura",
     ganoVisita: true,
   },
   {
     fecha: "11 oct",
-    local: "Cañuelas",
+    local: "Las Cañas",
     visita: "Campos RC",
     puntos: "35–14",
     torneo: "M17, zonal sur",
@@ -61,7 +61,7 @@ export const encuentros: Encuentro[] = [
   {
     dia: "24",
     mes: "octubre",
-    titulo: "Cañuelas contra Los Troncos",
+    titulo: "Las Cañas contra Los Troncos",
     detalles: "11:30, cancha 1, intermedia y primera",
     rol: "casa",
     RolTexto: "de local",
@@ -69,7 +69,7 @@ export const encuentros: Encuentro[] = [
   {
     dia: "01",
     mes: "noviembre",
-    titulo: "La Salle contra Cañuelas",
+    titulo: "La Salle contra Las Cañas",
     detalles: "10:00, sede La Salle, M17",
     rol: "afuera",
     RolTexto: "de visita",
@@ -77,7 +77,7 @@ export const encuentros: Encuentro[] = [
   {
     dia: "02",
     mes: "noviembre",
-    titulo: "Cañuelas contra Jaguares del Litoral",
+    titulo: "Las Cañas contra Jaguares del Litoral",
     detalles: "16:00, cancha 1, primera",
     rol: "afuera",
     RolTexto: "clásico",

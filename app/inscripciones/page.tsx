@@ -5,7 +5,7 @@ import FormularioInscripcion from "@/components/FormularioInscripcion";
 export const metadata: Metadata = {
   title: "Inscripciones",
   description:
-    "Cómo inscribirte en Cañuelas Rugby Club: rugby y hockey, desde la escuelita al plantel superior. Deja tus datos y te recibimos la semana que viene.",
+    "Cómo inscribirte en Las Cañas Rugby Club: rugby y hockey, desde la escuelita al plantel superior. Deja tus datos y te recibimos la semana que viene.",
 };
 
 export default function Inscripciones() {
@@ -15,8 +15,8 @@ export default function Inscripciones() {
       <section className="apertura">
         <div className="apertura__fondo">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/England_rugby_training_at_bath_arp.jpg/1920px-England_rugby_training_at_bath_arp.jpg"
-            alt="Entrenamiento al atardecer."
+            src="/equipo.jpg"
+            alt="Dos equipos en ronda charlando antes de jugar en el predio."
             fetchPriority="high"
           />
         </div>
@@ -55,7 +55,7 @@ export default function Inscripciones() {
               </ul>
 
               <p>
-                Entrenamos en el predio del club, Cañuelas, Buenos Aires.
+                Entrenamos en el predio del club, Buenos Aires.
                 Si preferís escribirnos: WhatsApp al 11 4567-8900.
               </p>
               <p>

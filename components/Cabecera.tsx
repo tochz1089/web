@@ -31,7 +31,7 @@ export default function Cabecera() {
         >
           <Escudo />
           <span>
-            <span className="club">Cañuelas Rugby Club</span>
+            <span className="club">Las Cañas Rugby Club</span>
             <span className="anios">rugby y hockey</span>
           </span>
         </Link>

@@ -1,4 +1,4 @@
-# Cañuelas Rugby Club — web
+# Las Cañas Rugby Club — web
 
 Sitio del club en **Next.js 14 + TypeScript**, con App Router, componentes servidor y cliente, datos tipados y hoja de estilos compartida.
 

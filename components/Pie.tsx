@@ -6,7 +6,7 @@ export default function Pie() {
       <div className="ancho">
         <div className="ultimo__cuadros">
           <div>
-            <h4>Cañuelas Rugby Club</h4>
+            <h4>Las Cañas Rugby Club</h4>
             <p>
               Rugby y hockey de pueblo. Formamos jugadores para la vida,
               no solo para el sábado.
@@ -33,19 +33,20 @@ export default function Pie() {
             <h4>Contacto</h4>
             <ul>
               <li><a href="tel:+541145678900">11 4567-8900</a></li>
-              <li><a href="mailto:club@canuelasrugby.com.ar">club@canuelasrugby.com.ar</a></li>
-              <li>Predio del club, Cañuelas, Buenos Aires</li>
+              <li><a href="mailto:club@lascanasrugby.com.ar">club@lascanasrugby.com.ar</a></li>
+              <li>Predio del club, Buenos Aires</li>
             </ul>
           </div>
         </div>
         <div className="ultimo__legal">
-          <p style={{ margin: 0 }}>© 2026 Cañuelas Rugby Club, sitio de demostración.</p>
+          <p style={{ margin: 0 }}>© 2026 Las Cañas Rugby Club, sitio de demostración.</p>
           <details>
             <summary>Créditos y fotos</summary>
             <p style={{ margin: ".6rem 0 0" }}>
-              Las imágenes son fotos genéricas de rugby y hockey de Wikimedia Commons,
-              con licencias libres (CC BY, CC BY-SA o dominio público). Las fotos reales
-              del plantel y del escudo se cambian cuando llegan del club.
+              Fotos del club: Gui Sanabria (PH). Las fotos del plantel y de la
+              galería que aún no son del club son imágenes ilustrativas de
+              Wikimedia Commons, con licencias libres; se van a reemplazar
+              por material propio a medida que llegue.
             </p>
           </details>
         </div>
