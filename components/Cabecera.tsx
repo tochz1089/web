@@ -12,6 +12,7 @@ const secciones: Seccion[] = [
   { etiqueta: "Rugby", ancla: "#rugby" },
   { etiqueta: "Hockey", ancla: "#hockey" },
   { etiqueta: "Cartelera", ancla: "#fixture" },
+  { etiqueta: "Cómo llegar", ancla: "#como-llegar" },
   { etiqueta: "Galería", ancla: "#album" },
 ];
 

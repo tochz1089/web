@@ -17,6 +17,7 @@ export default function Pie() {
             <ul>
               <li><a href="/#club">El club</a></li>
               <li><a href="/#fixture">Cartelera</a></li>
+              <li><a href="/#como-llegar">Cómo llegar</a></li>
               <li><a href="/#ramas">Edades y hockey</a></li>
               <li><Link href="/inscripciones">Inscripciones</Link></li>
             </ul>
@@ -32,9 +33,11 @@ export default function Pie() {
           <div>
             <h4>Contacto</h4>
             <ul>
-              <li><a href="tel:+541145678900">11 4567-8900</a></li>
-              <li><a href="mailto:club@lascanasrugby.com.ar">club@lascanasrugby.com.ar</a></li>
-              <li>Predio del club, Buenos Aires</li>
+              <li><a href="tel:+54222615609903">02226 15-609903</a></li>
+              <li><a href="tel:+542226422135">02226 422135</a> (mensajes)</li>
+              <li><a href="mailto:clublascanas_rugbyhockey@hotmail.com">clublascanas_rugbyhockey@hotmail.com</a></li>
+              <li>Secretaría: Santa Cruz 1101, Cañuelas (1814)</li>
+              <li>Canchas: Carlos Pellegrini y Santa Cruz, Cañuelas</li>
             </ul>
           </div>
         </div>

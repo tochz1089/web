@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { encuentros, figuras, galeria, horarios, resultados } from "@/lib/datos";
+import { encuentros, galeria, horarios, resultados } from "@/lib/datos";
 
 export default function Home() {
   return (
@@ -32,9 +32,9 @@ export default function Home() {
             </Link>
 
             <div className="apertura__numeros">
-              <div><b>412</b> socios del club</div>
-              <div><b>9</b> categorías, de M5 a plantel</div>
+              <div><b>1985</b> año de fundación</div>
               <div><b>2</b> deportes: rugby y hockey</div>
+              <div><b>URBA</b> club afiliado, sábados en Cañuelas</div>
             </div>
           </div>
         </div>
@@ -95,24 +95,31 @@ export default function Home() {
             <div className="premisa__cuerpo">
               <h2>Hecho de barro y de años</h2>
               <p>
-                En 1978, un grupo de amigos armó su primer equipo al costado de la
-                estación de Las Cañas. Hoy ese mismo predio tiene dos canchas, un quincho
-                y los sábados llenos de chicos de cinco años y de veteranos que no
-                aprendieron a parar.
+                Las Cañas Rugby Club quedó fundado el 15 de marzo de 1985. Desde
+                entonces el cuadrante entre Carlos Pellegrini y Santa Cruz es casa:
+                ahí están las canchas, el tercer tiempo y los sábados del pueblo.
+                La secretaría funciona a pocas cuadras, en Santa Cruz 1101.
               </p>
-              <blockquote>
-                “El partido de verdad se juega el martes a la tarde, cuando nadie está mirando.”
-                <footer>Horacio Tacho Baena, capitán entre 1994 y 2003</footer>
-              </blockquote>
               <p>
-                El club forma jugadores en la cancha y personas fuera de ella:
-                la camiseta no se regala, se gana en los entrenamientos.
+                El club juega afiliado a la URBA y forma jugadores en la cancha y
+                personas fuera de ella: la camiseta no se regala, se gana en los
+                entrenamientos.
               </p>
+              <ul className="camisetas">
+                <li>
+                  <span className="parche parche--titular" aria-hidden="true"></span>
+                  <span>Titular: camiseta verde y amarilla a cuadros, pantalón blanco y medias verdes.</span>
+                </li>
+                <li>
+                  <span className="parche parche--alternativa" aria-hidden="true"></span>
+                  <span>Alternativa: camiseta verde con cuello y puños amarillos, pantalón blanco y medias verdes.</span>
+                </li>
+              </ul>
               <div className="estampas">
-                <div className="estampa"><b>45</b><span>años jugando en el mismo predio</span></div>
-                <div className="estampa"><b>412</b><span>socios del club, chicos y grandes</span></div>
-                <div className="estampa"><b>9</b><span>categorías, de M5 a plantel</span></div>
-                <div className="estampa"><b>4</b><span>títulos de clubes del interior</span></div>
+                <div className="estampa"><b>1985</b><span>fundado el 15 de marzo</span></div>
+                <div className="estampa"><b>41</b><span>años en el mismo predio</span></div>
+                <div className="estampa"><b>1</b><span>secretaría: Santa Cruz 1101, Cañuelas</span></div>
+                <div className="estampa"><b>2</b><span>colores de siempre: verde y amarillo</span></div>
               </div>
               <Link className="boton" href="/inscripciones">Vení a conocernos</Link>
             </div>
@@ -161,6 +168,33 @@ export default function Home() {
                 <span>{h.detalle}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Cómo llegar */}
+      <section className="seccion" id="como-llegar">
+        <div className="ancho">
+          <div className="seccion__intro">
+            <h2>Cómo llegar</h2>
+            <p>
+              Las canchas están en Carlos Pellegrini y Santa Cruz, Cañuelas,
+              provincia de Buenos Aires. La secretaría, en Santa Cruz 1101.
+            </p>
+          </div>
+          <div className="horarios">
+            <div className="horario">
+              <b>En tren</b>
+              <span>Línea Roca desde Constitución hasta Cañuelas; del andén son 6 cuadras caminando hasta el club.</span>
+            </div>
+            <div className="horario">
+              <b>En colectivo</b>
+              <span>Línea 88 desde Plaza Once, Línea 51 desde Constitución y Línea 218 desde Liniers: todas llegan a Cañuelas.</span>
+            </div>
+            <div className="horario">
+              <b>En auto</b>
+              <span>Autopista Ezeiza-Cañuelas hasta la rotonda de la Esso; tome ruta 3 hacia San Miguel del Monte y, 3 km después (donde la ruta se hace doble), doble a la derecha: 400 m y está el club. Desde ruta 205, mismo camino pasando el castillo.</span>
+            </div>
           </div>
         </div>
       </section>
@@ -225,28 +259,75 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Plantel */}
-      <section className="seccion vestuario" id="plantel">
+      {/* Autoridades */}
+      <section className="seccion vestuario" id="autoridades">
         <div className="ancho">
           <div className="seccion__intro">
-            <h2>El plantel tiene nombres</h2>
-            <p>Los que cargan con la camiseta más veces y los que la llevan más alto en el torneo.</p>
+            <h2>Quiénes están al frente</h2>
+            <p>La comisión que ordena el club y el cuerpo técnico que conduce la cancha.</p>
           </div>
-          <div className="figuras">
-            {figuras.map((f) => (
-              <article className="figura" key={f.nombre}>
-                <div className="figura__foto">
-                  <img src={f.foto} alt={f.nombre} loading="lazy" />
+          <div className="autoridades">
+            <article className="autoridad">
+              <h3>Presidencia</h3>
+              <div>
+                <b>Claudio Mozotegui</b>
+                <div className="contacto">
+                  <a href="tel:+5491136817072">011 15-3681-7072</a>
+                  <a href="mailto:mozoteguicd@yahoo.com.ar">mozoteguicd@yahoo.com.ar</a>
                 </div>
-                <h3>{f.nombre}</h3>
-                <span className="puesto">{f.puesto}</span>
-                <p>{f.historia}</p>
-              </article>
-            ))}
+              </div>
+            </article>
+            <article className="autoridad">
+              <h3>Secretaría</h3>
+              <div>
+                <b>Diego Baquero</b>
+                <div className="contacto">
+                  <a href="tel:+5492226681725">02226 15-681725</a>
+                  <a href="mailto:mula09@hotmail.com">mula09@hotmail.com</a>
+                </div>
+              </div>
+            </article>
+            <article className="autoridad">
+              <h3>Capitán general de rugby</h3>
+              <div>
+                <b>Fernando C. Alzugaray</b>
+                <div className="contacto">
+                  <a href="tel:+5491154273813">011 15-5427-3813</a>
+                  <a href="mailto:fernando_alzugaray@hotmail.com">fernando_alzugaray@hotmail.com</a>
+                </div>
+              </div>
+            </article>
+            <article className="autoridad">
+              <h3>Coordinador de rugby infantil</h3>
+              <div>
+                <b>Diego Saied</b>
+                <div className="contacto">
+                  <a href="tel:+543758433566">3758 43-3566</a>
+                  <a href="mailto:diesai@yahoo.com">diesai@yahoo.com</a>
+                </div>
+              </div>
+            </article>
+            <article className="autoridad">
+              <h3>Coordinador de rugby juvenil</h3>
+              <div>
+                <b>Fernando C. Alzugaray</b>
+                <div className="contacto">
+                  <a href="tel:+5491154273813">011 15-5427-3813</a>
+                  <a href="mailto:fernando_alzugaray@hotmail.com">fernando_alzugaray@hotmail.com</a>
+                </div>
+              </div>
+            </article>
+            <article className="autoridad">
+              <h3>Capitán de división superior</h3>
+              <div>
+                <b>Mario E. Sosa</b>
+                <div className="contacto">
+                  <a href="tel:+5492226544126">02226 15-544126</a>
+                  <a href="mailto:mezequielsosa@gmail.com">mezequielsosa@gmail.com</a>
+                </div>
+              </div>
+            </article>
           </div>
-          <p className="aclaracion">
-            Las fotos son ilustrativas: las de cada persona entran con la temporada.
-          </p>
         </div>
       </section>
 

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s — Las Cañas Rugby Club",
   },
   description:
-    "Las Cañas Rugby Club: rugby y hockey de pueblo. Escuelita desde los 5 años, dos canchas propias y el tercer tiempo como institución. Anotate para jugar.",
+    "Las Cañas Rugby Club: rugby y hockey en Cañuelas desde 1985. Canchas en Carlos Pellegrini y Santa Cruz, escuelita, juveniles y superior afiliado a la URBA. Anotate para jugar.",
 };
 
 export default function RootLayout({

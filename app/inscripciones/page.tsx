@@ -55,8 +55,15 @@ export default function Inscripciones() {
               </ul>
 
               <p>
-                Entrenamos en el predio del club, Buenos Aires.
-                Si preferís escribirnos: WhatsApp al 11 4567-8900.
+                La secretaría funciona en Santa Cruz 1101, Cañuelas (1814).
+                Escribinos por WhatsApp al 02226 15-609903 o a
+                clublascanas_rugbyhockey@hotmail.com y te respondemos en el día.
+              </p>
+              <p>
+                Las canchas están en Carlos Pellegrini y Santa Cruz: tren Línea
+                Roca desde Constitución, colectivos 88, 51 y 218, o autopista
+                Ezeiza-Cañuelas por ruta 3. Todo el detalle queda en la Home,
+                sección “Cómo llegar”.
               </p>
               <p>
                 <Link className="boton" href="/">Volver a la home</Link>
