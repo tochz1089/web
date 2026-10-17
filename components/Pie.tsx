@@ -15,10 +15,10 @@ export default function Pie() {
           <div>
             <h4>Secciones</h4>
             <ul>
-              <li><a href="/#club">El club</a></li>
-              <li><a href="/#fixture">Cartelera</a></li>
-              <li><a href="/#como-llegar">Cómo llegar</a></li>
-              <li><a href="/#ramas">Edades y hockey</a></li>
+              <li><Link href="/rugby">Rugby</Link></li>
+              <li><Link href="/hockey">Hockey</Link></li>
+              <li><Link href="/cartelera">Cartelera</Link></li>
+              <li><Link href="/el-club">El club</Link></li>
               <li><Link href="/inscripciones">Inscripciones</Link></li>
             </ul>
           </div>

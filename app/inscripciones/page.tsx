@@ -62,8 +62,8 @@ export default function Inscripciones() {
               <p>
                 Las canchas están en Carlos Pellegrini y Santa Cruz: tren Línea
                 Roca desde Constitución, colectivos 88, 51 y 218, o autopista
-                Ezeiza-Cañuelas por ruta 3. Todo el detalle queda en la Home,
-                sección “Cómo llegar”.
+                Ezeiza-Cañuelas por ruta 3. El detalle punto a punto queda en
+                la página El club, sección “Cómo llegar”.
               </p>
               <p>
                 <Link className="boton" href="/">Volver a la home</Link>

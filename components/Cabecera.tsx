@@ -5,43 +5,39 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Escudo from "./Escudo";
 
-type Seccion = { etiqueta: string; ancla: string };
-
-const secciones: Seccion[] = [
-  { etiqueta: "El club", ancla: "#club" },
-  { etiqueta: "Rugby", ancla: "#rugby" },
-  { etiqueta: "Hockey", ancla: "#hockey" },
-  { etiqueta: "Cartelera", ancla: "#fixture" },
-  { etiqueta: "Cómo llegar", ancla: "#como-llegar" },
-  { etiqueta: "Galería", ancla: "#album" },
+const secciones = [
+  { etiqueta: "Inicio", ruta: "/" },
+  { etiqueta: "Rugby", ruta: "/rugby" },
+  { etiqueta: "Hockey", ruta: "/hockey" },
+  { etiqueta: "Cartelera", ruta: "/cartelera" },
+  { etiqueta: "El club", ruta: "/el-club" },
 ];
 
 export default function Cabecera() {
   const [abierto, setAbierto] = useState(false);
   const ruta = usePathname();
-  const enHome = ruta === "/";
-  const enlace = (ancla: string) => (enHome ? ancla : `/${ancla}`);
 
   return (
     <header className="arriba">
       <div className="ancho arriba__fila">
-        <Link
-          className="mosca"
-          href={enHome ? "#juego" : "/"}
-          onClick={() => setAbierto(false)}
-        >
+        <Link className="mosca" href="/" onClick={() => setAbierto(false)}>
           <Escudo />
           <span>
             <span className="club">Las Cañas Rugby Club</span>
-            <span className="anios">rugby y hockey</span>
+            <span className="anios">rugby y hockey · Cañuelas</span>
           </span>
         </Link>
 
         <nav className={abierto ? "menu abierto" : "menu"} id="menu" aria-label="Navegación principal">
           {secciones.map((s) => (
-            <a key={s.ancla} href={enlace(s.ancla)} onClick={() => setAbierto(false)}>
+            <Link
+              key={s.ruta}
+              href={s.ruta}
+              aria-current={ruta === s.ruta ? "page" : undefined}
+              onClick={() => setAbierto(false)}
+            >
               {s.etiqueta}
-            </a>
+            </Link>
           ))}
           <Link
             className="ya-vas"
