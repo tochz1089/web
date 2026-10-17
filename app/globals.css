@@ -1,0 +1,746 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@600;800;900&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&display=swap');
+
+    /* ================================================================
+       CAÑUELAS RUGBY CLUB — hoja de estilos
+       La identidad sale del club físico: césped nublado, cal de las
+       líneas pintadas, tablero del resultado, ladrillo del quincho,
+       lodo del potrero. Nada decorativo que no venga de ese mundo.
+    ================================================================= */
+
+    :root {
+      --bocha: #e9ebe1;      /* fondo, césped de día nublado */
+      --tinta: #14301f;      /* verde botella casi negro */
+      --cancha: #2e5b3a;     /* verde medio */
+      --barro: #6b543c;      /* lodo del potrero */
+      --oxido: #f5cf0a;      /* amarillo marca del escudo: marcador y acciones */
+      --cal: #f7f5ec;        /* cal de las líneas pintadas */
+      --cal-vieja: #d6d3c3;  /* líneas desgastadas sobre fondo claro */
+
+      --tipografia: "Bricolage Grotesque", system-ui, sans-serif;
+      --camiseta: "Anybody", var(--tipografia);
+
+      --cuadrado: 4px;
+      --lateral: 6px;        /* grosor de las líneas pintadas */
+      --transicion: 180ms ease;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bocha);
+      color: var(--tinta);
+      font-family: var(--tipografia);
+      font-size: 1.0625rem;
+      line-height: 1.6;
+      font-optical-sizing: auto;
+    }
+    img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    a { color: inherit; }
+    :focus-visible { outline: 3px solid var(--oxido); outline-offset: 3px; }
+    ::selection { background: var(--cancha); color: var(--cal); }
+
+    .ancho { width: min(1160px, 100% - 2.5rem); margin-inline: auto; }
+
+    /* ---------- Titulares: tipografía de espalda de camiseta ---------- */
+    h1, h2 {
+      font-family: var(--camiseta);
+      font-weight: 800;
+      font-stretch: 90%;
+      letter-spacing: -.01em;
+      line-height: 1.04;
+      text-transform: uppercase;
+      margin: 0 0 .5rem;
+    }
+    h2 { font-size: clamp(1.7rem, 3.2vw, 2.4rem); }
+    h3 { font-weight: 700; font-size: 1.15rem; margin: 0 0 .4rem; }
+    p { margin: 0 0 1rem; max-width: 60ch; }
+
+    /* ---------- Cabecera ---------- */
+    .arriba {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--bocha);
+      border-bottom: var(--lateral) solid var(--tinta);
+    }
+    .arriba__fila {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: 64px;
+    }
+    .mosca { display: flex; align-items: center; gap: .55rem; text-decoration: none; }
+    .mosca .y {
+      font-family: var(--camiseta);
+      font-weight: 900;
+      font-stretch: 75%;
+      font-size: 1.9rem;
+      line-height: 1;
+      color: var(--oxido);
+    }
+    .mosca .club {
+      display: block;
+      font-family: var(--camiseta);
+      font-weight: 800;
+      font-stretch: 90%;
+      text-transform: uppercase;
+      font-size: .95rem;
+      line-height: 1.15;
+    }
+    .mosca .anios {
+      display: block;
+      font-weight: 600;
+      font-size: .72rem;
+      color: var(--barro);
+    }
+    .menu { display: flex; align-items: center; gap: 1.4rem; }
+    .menu a {
+      text-decoration: none;
+      font-weight: 600;
+      font-size: .95rem;
+      padding: .3em 0;
+      border-bottom: 3px solid transparent;
+    }
+    .menu a:hover { color: var(--oxido); border-bottom-color: var(--oxido); }
+    .menu a.ya-vas:hover { color: var(--cal); }
+    .menu a.ya-vas {
+      background: var(--tinta);
+      color: var(--cal);
+      padding: .55em 1.2em;
+      border-bottom: 3px solid var(--tinta);
+    }
+    .menu a.ya-vas:hover { background: var(--oxido); border-bottom-color: var(--oxido); }
+    .hammenu {
+      display: none;
+      background: none;
+      border: 2px solid var(--tinta);
+      border-radius: var(--cuadrado);
+      cursor: pointer;
+      padding: .4rem .55rem;
+      color: var(--tinta);
+    }
+    .hammenu svg { display: block; }
+
+    /* ---------- Portada ---------- */
+    .apertura {
+      position: relative;
+      isolation: isolate;
+      background: var(--tinta);
+      min-height: min(86svh, 760px);
+      display: grid;
+      align-content: end;
+      overflow: hidden;
+    }
+    .apertura__fondo { position: absolute; inset: 0; z-index: -2; }
+    .apertura__fondo img { filter: saturate(.85) brightness(.92); }
+    .apertura::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(180deg, rgb(20 48 31 / 0) 30%, rgb(20 48 31 / .84) 84%),
+        linear-gradient(75deg, rgb(20 48 31 / .6) 0%, rgb(20 48 31 / 0) 55%);
+    }
+    .apertura__tarjeta {
+      padding: clamp(2.5rem, 7vw, 5rem) 0 clamp(2.2rem, 5vw, 3.5rem);
+      color: var(--cal);
+    }
+    .apertura h1 {
+      font-size: clamp(2.8rem, 8vw, 5.6rem);
+      color: var(--cal);
+      max-width: 13ch;
+      margin-bottom: .4rem;
+    }
+    .apertura h1 .segunda { display: block; color: rgb(247 245 236 / .92); }
+    .apertura__cartel {
+      display: inline-flex;
+      align-items: stretch;
+      margin: 1.4rem 0 1.8rem;
+      background: var(--cal);
+      color: var(--tinta);
+      border: 3px solid var(--cal);
+      border-radius: var(--cuadrado);
+      overflow: hidden;
+      text-decoration: none;
+    }
+    .apertura__cartel .lado {
+      padding: .7rem 1.1rem .6rem;
+      display: grid;
+      align-content: center;
+      gap: .1rem;
+    }
+    .apertura__cartel .rival { font-weight: 700; font-size: .98rem; line-height: 1.15; }
+    .apertura__cartel .detalle { font-size: .75rem; color: var(--barro); }
+    .apertura__cartel .dia {
+      background: var(--oxido);
+      color: var(--cal);
+      padding: .7rem 1.15rem .6rem;
+      display: grid;
+      align-content: center;
+      gap: .1rem;
+    }
+    .apertura__cartel .dia b {
+      font-family: var(--camiseta);
+      font-weight: 900;
+      font-size: 1.5rem;
+      line-height: 1.05;
+    }
+    .apertura__cartel .dia span { font-size: .72rem; }
+    .apertura__numeros {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2.5rem;
+      align-items: baseline;
+      font-size: .95rem;
+      color: rgb(247 245 236 / .8);
+    }
+    .apertura__numeros b {
+      margin-right: .3rem;
+      font-family: var(--camiseta);
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: var(--cal);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ---------- Línea pintada con la pelota descansando encima ---------- */
+    .pintura {
+      border: 0;
+      height: var(--lateral);
+      background: var(--cal-vieja);
+      margin: 0;
+      position: relative;
+    }
+    .pintura::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: clamp(1rem, 50%, 46rem);
+      width: 44px;
+      height: 30px;
+      transform: translate(-50%, -50%);
+      background: var(--bocha);
+      border: var(--lateral) solid var(--tinta);
+      border-radius: 50%;
+    }
+
+    /* ---------- Disciplinas: dos paneles, Rugby y Hockey ---------- */
+    .disciplinas {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 1rem;
+      padding-bottom: 2.6rem;
+      background: var(--bocha);
+    }
+    .disco {
+      position: relative;
+      isolation: isolate;
+      display: grid;
+      align-content: end;
+      gap: .3rem;
+      min-height: 430px;
+      padding: 2rem 2rem 2.2rem;
+      color: var(--cal);
+      text-decoration: none;
+      overflow: hidden;
+      border-radius: var(--cuadrado);
+      transition: transform var(--transicion);
+    }
+    .disco:hover { transform: translateY(-3px); }
+    .disco img { position: absolute; inset: 0; z-index: -2; height: 100%; }
+    .disco::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(180deg, rgb(20 48 31 / .15) 24%, rgb(20 48 31 / .86) 84%);
+    }
+    .disco::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: var(--lateral);
+      background: var(--cal);
+      z-index: 2;
+    }
+    .disco--hockey::before { background: var(--oxido); }
+    .disco h2 {
+      font-size: clamp(2.4rem, 4.6vw, 3.8rem);
+      margin-bottom: 0;
+    }
+    .disco p { margin: .3rem 0 .6rem; font-size: .98rem; max-width: 42ch; color: rgb(247 245 236 / .88); }
+    .disco .atravesar {
+      font-family: var(--camiseta);
+      font-weight: 800;
+      font-stretch: 88%;
+      text-transform: uppercase;
+      font-size: .9rem;
+      color: var(--cal);
+      border-bottom: var(--lateral) solid var(--oxido);
+      align-self: start;
+    }
+
+    /* ---------- Secciones ---------- */
+    .seccion { padding: clamp(3.2rem, 7vw, 5.5rem) 0; }
+    .seccion__intro { max-width: 620px; margin-bottom: 2.6rem; }
+    .seccion__intro p { margin-bottom: 0; color: rgb(20 48 31 / .78); }
+
+    /* ---------- Tablero de resultados ---------- */
+    .tablero { background: var(--tinta); color: var(--cal); padding: 2.6rem 0; }
+    .tablero__titulo {
+      font-family: var(--camiseta);
+      font-weight: 800;
+      font-stretch: 90%;
+      text-transform: uppercase;
+      font-size: .95rem;
+      margin: 0 0 1.3rem;
+      color: rgb(247 245 236 / .6);
+    }
+    .renglon {
+      display: grid;
+      grid-template-columns: 5.6rem 1fr auto auto;
+      align-items: center;
+      gap: .4rem 1.6rem;
+      padding: 1.05rem 0;
+      border-top: var(--lateral) solid var(--cancha);
+    }
+    .renglon:first-of-type { border-top: 0; }
+    .renglon__fecha {
+      font-weight: 600;
+      font-size: .8rem;
+      color: rgb(247 245 236 / .55);
+    }
+    .renglon__duelo {
+      font-family: var(--camiseta);
+      font-weight: 700;
+      font-stretch: 88%;
+      text-transform: uppercase;
+      font-size: 1.12rem;
+    }
+    .renglon__duelo .gano { color: var(--oxido); }
+    .renglon__duelo small {
+      display: block;
+      font-family: var(--tipografia);
+      font-weight: 500;
+      font-size: .78rem;
+      text-transform: none;
+      color: rgb(247 245 236 / .55);
+    }
+    .renglon__puntos {
+      font-family: var(--camiseta);
+      font-weight: 900;
+      font-size: 1.9rem;
+      line-height: 1;
+      letter-spacing: .03em;
+      font-variant-numeric: tabular-nums;
+    }
+    .renglon__lugar {
+      font-weight: 600;
+      font-size: .8rem;
+      color: rgb(247 245 236 / .55);
+    }
+
+    /* ---------- El club ---------- */
+    .premisa {
+      display: grid;
+      grid-template-columns: 1.05fr .9fr;
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: start;
+    }
+    .premisa__cuerpo h2 { margin-bottom: 1rem; }
+    .premisa__cuerpo blockquote {
+      margin: 1.3rem 0;
+      padding: .3rem 0 .3rem 1.3rem;
+      border-left: var(--lateral) solid var(--barro);
+      color: var(--barro);
+      font-weight: 600;
+      font-size: 1.06rem;
+    }
+    .premisa__cuerpo blockquote footer {
+      font-weight: 500;
+      font-size: .8rem;
+      margin-top: .3rem;
+    }
+    .premisa__foto { margin: 0; position: relative; border-radius: var(--cuadrado); overflow: hidden; }
+    .premisa__foto img { aspect-ratio: 4 / 4.5; }
+    .premisa__foto figcaption {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: .5rem .9rem;
+      background: var(--cal);
+      border-top: var(--lateral) solid var(--tinta);
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--barro);
+    }
+    .estampas {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.1rem 1.8rem;
+      margin: 1.6rem 0 2rem;
+      padding-top: 1.5rem;
+      border-top: var(--lateral) solid var(--tinta);
+    }
+    .estampa b {
+      display: block;
+      font-family: var(--camiseta);
+      font-weight: 900;
+      font-size: clamp(1.9rem, 3.2vw, 2.7rem);
+      line-height: 1;
+      color: var(--oxido);
+      font-variant-numeric: tabular-nums;
+    }
+    .estampa span { font-weight: 600; font-size: .86rem; color: rgb(20 48 31 / .72); }
+
+    /* ---------- Fixture ---------- */
+    .pizarra { max-width: 800px; }
+    .jornada {
+      display: grid;
+      grid-template-columns: 5.4rem 1fr auto;
+      align-items: center;
+      gap: 1.4rem;
+      padding: 1.15rem 0 1.25rem;
+      border-top: var(--lateral) solid var(--tinta);
+      text-decoration: none;
+      transition: background var(--transicion);
+    }
+    .jornada:last-of-type { border-bottom: var(--lateral) solid var(--tinta); }
+    .jornada:hover { background: rgb(46 91 58 / .09); }
+    .jornada__fecha {
+      text-align: center;
+      border-right: var(--lateral) solid var(--barro);
+      padding: .2rem 1rem .2rem 0;
+    }
+    .jornada__fecha b {
+      display: block;
+      font-family: var(--camiseta);
+      font-weight: 900;
+      font-size: 1.9rem;
+      line-height: 1.05;
+    }
+    .jornada__fecha span {
+      font-weight: 700;
+      font-size: .66rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--barro);
+    }
+    .jornada__duelo { text-align: center; }
+    .jornada__duelo strong {
+      font-family: var(--camiseta);
+      font-weight: 700;
+      font-stretch: 88%;
+      text-transform: uppercase;
+      font-size: 1.05rem;
+    }
+    .jornada__duelo strong .de-casa { color: var(--oxido); }
+    .jornada__duelo small { display: block; font-size: .8rem; color: rgb(20 48 31 / .65); }
+    .jornada__rol {
+      justify-self: end;
+      font-weight: 700;
+      font-size: .76rem;
+      letter-spacing: .06em;
+      text-transform: lowercase;
+      padding: .45em .9em;
+      border-radius: var(--cuadrado);
+      color: var(--cal);
+      white-space: nowrap;
+    }
+    .jornada__rol.casa { background: var(--oxido); }
+    .jornada__rol.afuera { background: var(--cancha); }
+    .jornada__rol.fiesta { background: var(--barro); }
+
+    /* ---------- Horarios de entrenamiento ---------- */
+    .horarios {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.6rem;
+      max-width: 800px;
+      margin-top: 2.6rem;
+      padding-top: 1.8rem;
+      border-top: var(--lateral) solid var(--barro);
+    }
+    .horario b {
+      display: block;
+      font-family: var(--camiseta);
+      font-weight: 800;
+      font-stretch: 88%;
+      text-transform: uppercase;
+      font-size: 1.05rem;
+      margin-bottom: .25rem;
+    }
+    .horario span { font-size: .9rem; color: rgb(20 48 31 / .72); }
+
+    /* ---------- Ramas ---------- */
+    .bandas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.1rem; }
+    .banda {
+      position: relative;
+      display: grid;
+      align-content: end;
+      min-height: 350px;
+      padding: 1.15rem 1.25rem 1.3rem;
+      color: var(--cal);
+      text-decoration: none;
+      overflow: hidden;
+      border-radius: var(--cuadrado);
+      isolation: isolate;
+    }
+    .banda img { position: absolute; inset: 0; z-index: -2; height: 100%; }
+    .banda::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(180deg, rgb(20 48 31 / 0) 34%, rgb(20 48 31 / .88) 84%);
+    }
+    .banda::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: var(--lateral);
+      background: var(--cal);
+    }
+    .banda[data-categoria="juveniles"]::before { background: var(--oxido); }
+    .banda[data-categoria="femenino"]::before { background: var(--barro); }
+    .banda[data-categoria="hockey"]::before { background: var(--barro); }
+    .banda[data-categoria="superior"]::before { background: var(--cancha); }
+    .banda .grupo {
+      font-weight: 600;
+      font-size: .78rem;
+      color: rgb(247 245 236 / .85);
+      margin-bottom: .2rem;
+    }
+    .banda h3 {
+      font-family: var(--camiseta);
+      font-weight: 800;
+      font-stretch: 88%;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      margin-bottom: .3rem;
+    }
+    .banda p { margin: 0; font-size: .86rem; color: rgb(247 245 236 / .85); }
+
+    /* ---------- Plantel ---------- */
+    .vestuario { background: var(--tinta); color: var(--cal); }
+    .vestuario h2 { color: var(--cal); }
+    .vestuario .seccion__intro p { color: rgb(247 245 236 / .7); }
+    .figuras { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4rem 1.1rem; }
+    .figura { border-top: var(--lateral) solid var(--oxido); padding-top: 1rem; }
+    .figura__foto {
+      aspect-ratio: 4 / 4.3;
+      overflow: hidden;
+      border-radius: var(--cuadrado);
+      margin-bottom: .9rem;
+    }
+    .figura__foto img { transition: transform .5s cubic-bezier(.2, .7, .3, 1); }
+    .figura:hover .figura__foto img { transform: scale(1.04); }
+    .figura h3 {
+      font-family: var(--camiseta);
+      font-weight: 800;
+      font-stretch: 88%;
+      text-transform: uppercase;
+      font-size: 1.18rem;
+      margin-bottom: .1rem;
+    }
+    .figura .puesto {
+      display: block;
+      font-weight: 700;
+      font-size: .72rem;
+      letter-spacing: .1em;
+      color: var(--oxido);
+      margin-bottom: .45rem;
+    }
+    .figura p { margin: 0; font-size: .88rem; color: rgb(247 245 236 / .72); }
+    .vestuario .aclaracion {
+      margin: 1.5rem 0 0;
+      font-size: .8rem;
+      color: rgb(247 245 236 / .45);
+    }
+
+    /* ---------- Galería ---------- */
+    .album {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 180px;
+      gap: 1rem;
+    }
+    .album figure { margin: 0; position: relative; overflow: hidden; border-radius: var(--cuadrado); }
+    .album figure.alta { grid-row: span 2; }
+    .album figure.larga { grid-column: span 2; }
+    .album img { transition: transform .6s cubic-bezier(.2, .7, .3, 1); }
+    .album figure:hover img { transform: scale(1.05); }
+    .album figcaption {
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%;
+      padding: 1.9rem .95rem .7rem;
+      background: linear-gradient(180deg, transparent, rgb(20 48 31 / .78));
+      color: var(--cal);
+      font-size: .8rem;
+      font-weight: 600;
+    }
+
+    /* ---------- Súmate ---------- */
+    .convocatoria { background: var(--tinta); color: var(--cal); position: relative; isolation: isolate; }
+    .convocatoria::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 55% 45% at 78% 0%, rgb(46 91 58 / .5), transparent 70%);
+      z-index: -1;
+    }
+    .convocatoria h2, .convocatoria h3 { color: var(--cal); }
+    .convocatoria p { color: rgb(247 245 236 / .82); }
+    .union { display: grid; grid-template-columns: 1fr .9fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+    .promesas { list-style: none; margin: 1.3rem 0 1.9rem; padding: 0; display: grid; gap: .8rem; }
+    .promesas li { display: grid; grid-template-columns: 1.3rem 1fr; gap: .7rem; align-items: baseline; }
+    .promesas .num {
+      font-family: var(--camiseta);
+      font-weight: 900;
+      font-size: 1.15rem;
+      color: var(--oxido);
+      line-height: 1.3;
+    }
+    .inscripcion {
+      background: var(--cal);
+      color: var(--tinta);
+      border-radius: var(--cuadrado);
+      padding: 1.9rem 1.8rem 2rem;
+    }
+    .inscripcion h3 {
+      font-family: var(--camiseta);
+      font-weight: 800;
+      font-stretch: 88%;
+      text-transform: uppercase;
+      font-size: 1.35rem;
+      margin-bottom: .2rem;
+    }
+    .inscripcion > p { font-size: .92rem; color: rgb(20 48 31 / .68); margin-bottom: 1.3rem; }
+    .caja { display: block; margin-bottom: 1.05rem; }
+    .caja span { display: block; font-weight: 700; font-size: .8rem; margin-bottom: .3rem; }
+    .caja input, .caja select {
+      width: 100%;
+      font: inherit;
+      padding: .65em .85em;
+      color: var(--tinta);
+      background: #fff;
+      border: 2px solid var(--tinta);
+      border-radius: var(--cuadrado);
+      transition: box-shadow var(--transicion);
+    }
+    .caja input:focus, .caja select:focus {
+      outline: none;
+      box-shadow: 0 0 0 4px rgb(176 58 36 / .35);
+    }
+    .pareja { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
+    .inscripcion .aviso { font-size: .78rem; color: var(--barro); margin: .4rem 0 1.2rem; }
+    .boton {
+      display: inline-block;
+      font-family: var(--camiseta);
+      font-weight: 800;
+      font-stretch: 88%;
+      text-transform: uppercase;
+      font-size: 1rem;
+      text-decoration: none;
+      background: var(--oxido);
+      color: var(--cal);
+      border: 3px solid var(--oxido);
+      padding: .65em 1.4em;
+      border-radius: var(--cuadrado);
+      cursor: pointer;
+      transition: background var(--transicion), border-color var(--transicion);
+    }
+    .boton:hover { background: var(--tinta); border-color: var(--tinta); }
+    .inscripcion .boton { width: 100%; }
+    .inscripcion .boton:disabled { opacity: .5; cursor: default; }
+    .inscripcion .boton:disabled:hover { background: var(--oxido); border-color: var(--oxido); }
+    .confirmado {
+      display: none;
+      margin-top: 1.1rem;
+      padding: .85rem 1rem;
+      background: var(--bocha);
+      border-left: var(--lateral) solid var(--oxido);
+      font-weight: 600;
+      font-size: .9rem;
+    }
+    .confirmado.visible { display: block; }
+
+    /* ---------- Pie ---------- */
+    .ultimo { border-top: var(--lateral) solid var(--tinta); padding: 3rem 0 2rem; }
+    .ultimo__cuadros { display: grid; grid-template-columns: 1.3fr .7fr .9fr 1fr; gap: 2rem; }
+    .ultimo h4 {
+      font-family: var(--camiseta);
+      font-weight: 800;
+      font-stretch: 88%;
+      text-transform: uppercase;
+      font-size: .82rem;
+      margin: 0 0 .9rem;
+      color: var(--oxido);
+    }
+    .ultimo ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .45rem; font-size: .92rem; }
+    .ultimo p { margin: 0; font-size: .92rem; color: rgb(20 48 31 / .78); }
+    .ultimo a { text-decoration-color: var(--oxido); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    .ultimo a:hover { color: var(--oxido); }
+    .ultimo__legal {
+      margin-top: 2.5rem;
+      padding-top: 1.2rem;
+      border-top: var(--lateral) solid var(--cal-vieja);
+      font-size: .78rem;
+      color: rgb(20 48 31 / .6);
+    }
+    .ultimo__legal details { margin-top: .6rem; }
+    .ultimo__legal summary { cursor: pointer; font-weight: 600; }
+    .ultimo__legal summary:hover { color: var(--oxido); }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 1000px) {
+      .bandas, .figuras { grid-template-columns: repeat(2, 1fr); }
+      .premisa, .union { grid-template-columns: 1fr; }
+      .disciplinas { grid-template-columns: 1fr; }
+      .premisa__foto { max-width: 500px; }
+      .album { grid-template-columns: repeat(2, 1fr); }
+      .ultimo__cuadros { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 680px) {
+      .menu {
+        position: absolute;
+        top: 100%;
+        left: 0; right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: var(--bocha);
+        border-bottom: var(--lateral) solid var(--tinta);
+        padding: .5rem 1.2rem 1.2rem;
+      }
+      .menu.abierto { display: flex; }
+      .menu a:hover { color: var(--tinta); border-bottom-color: var(--cal-vieja); }
+      .menu a { padding: .8em .2em; border-bottom: 2px solid var(--cal-vieja); }
+      .menu a.ya-vas { margin-top: .9rem; text-align: center; }
+      .hammenu { display: block; }
+      .bandas, .figuras { grid-template-columns: 1fr; }
+      .album { grid-template-columns: 1fr; grid-auto-rows: 210px; }
+      .album figure.alta, .album figure.larga { grid-row: auto; grid-column: auto; }
+      .renglon { grid-template-columns: 1fr auto; }
+      .renglon__fecha { grid-column: 1; }
+      .renglon__puntos { grid-row: 2; grid-column: 1; }
+      .renglon__lugar { grid-column: 1; }
+      .jornada { grid-template-columns: 4.4rem 1fr; }
+      .jornada__rol { grid-column: 2; justify-self: start; }
+      .pareja { grid-template-columns: 1fr; gap: 0; }
+      .horarios { grid-template-columns: 1fr; gap: 1.1rem; max-width: none; }
+      .estampas { grid-template-columns: repeat(2, 1fr); }
+      .ultimo__cuadros { grid-template-columns: 1fr; gap: 1.7rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .figura__foto img, .album img { transition: none; }
+    }
+  
