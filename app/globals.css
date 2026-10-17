@@ -83,17 +83,15 @@
     }
     .mosca .club {
       display: block;
-      font-family: var(--camiseta);
+      font-family: var(--tipografia);
       font-weight: 700;
-      font-stretch: 90%;
-      text-transform: uppercase;
-      font-size: .95rem;
-      line-height: 1.15;
+      font-size: 1rem;
+      line-height: 1.2;
     }
     .mosca .anios {
       display: block;
-      font-weight: 600;
-      font-size: .72rem;
+      font-weight: 500;
+      font-size: .78rem;
       color: var(--barro);
     }
     .menu { display: flex; align-items: center; gap: 1.4rem; }
@@ -751,7 +749,21 @@
       height: auto;
       flex: 0 0 auto;
       object-fit: contain;
+      mix-blend-mode: multiply; /* el escudo va sin caja blanca encima del fondo */
     }
+
+    /* ---------- Próximo partido en la portada ---------- */
+    .apertura__proxima {
+      margin: 1.4rem 0 0;
+      font-size: .95rem;
+      color: rgb(247 245 236 / .8);
+    }
+    .apertura__proxima a {
+      color: var(--oxido);
+      text-decoration: none;
+      border-bottom: 2px solid rgb(245 207 10 / .45);
+    }
+    .apertura__proxima a:hover { border-bottom-color: var(--oxido); }
 
     /* ---------- Autoridades: comisión y cuerpo técnico ---------- */
     .autoridades { display: grid; gap: .55rem; margin-top: 1.8rem; }

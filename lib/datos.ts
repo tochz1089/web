@@ -1,21 +1,10 @@
-// Datos editables del club: cambiar acá, no en las páginas.
-
-export type Resultado = {
-  fecha: string;
-  local: string;
-  visita: string;
-  puntos: string;
-  torneo: string;
-  ganoVisita: boolean;
-};
+// Datos del club, editables: se cambian acá y todas las páginas quedan actualizadas.
 
 export type Encuentro = {
-  dia: string;
-  mes: string;
+  fecha: string;
   titulo: string;
-  detalles: string;
-  rol: "casa" | "afuera" | "fiesta";
- RolTexto: string;
+  detalle: string;
+  nota: string;
 };
 
 export type Horario = {
@@ -23,137 +12,57 @@ export type Horario = {
   detalle: string;
 };
 
-export type Figura = {
-  nombre: string;
-  puesto: string;
-  historia: string;
-  foto: string;
+export type Foto = {
+  src: string;
+  pie: string;
 };
 
-export const resultados: Resultado[] = [
+// Fixture: se completa cuando llega la programación del torneo.
+export const fixture: Encuentro[] = [
   {
-    fecha: "18 oct",
-    local: "Las Cañas",
-    visita: "Old Lions",
-    puntos: "28–17",
-    torneo: "Primera, torneo Apertura",
-    ganoVisita: false,
-  },
-  {
-    fecha: "18 oct",
-    local: "Arquitectura RC",
-    visita: "Las Cañas",
-    puntos: "19–26",
-    torneo: "Intermedia, torneo Apertura",
-    ganoVisita: true,
-  },
-  {
-    fecha: "11 oct",
-    local: "Las Cañas",
-    visita: "Campos RC",
-    puntos: "35–14",
-    torneo: "M17, zonal sur",
-    ganoVisita: false,
+    fecha: "a definir",
+    titulo: "Primera división",
+    detalle: "rival y horario por confirmar",
+    nota: "el resto de las fechas se suma cuando sale la programación de la URBA",
   },
 ];
 
-export const encuentros: Encuentro[] = [
-  {
-    dia: "24",
-    mes: "octubre",
-    titulo: "Las Cañas contra Los Troncos",
-    detalles: "11:30, cancha 1, intermedia y primera",
-    rol: "casa",
-    RolTexto: "de local",
-  },
-  {
-    dia: "01",
-    mes: "noviembre",
-    titulo: "La Salle contra Las Cañas",
-    detalles: "10:00, sede La Salle, M17",
-    rol: "afuera",
-    RolTexto: "de visita",
-  },
-  {
-    dia: "02",
-    mes: "noviembre",
-    titulo: "Las Cañas contra Jaguares del Litoral",
-    detalles: "16:00, cancha 1, primera",
-    rol: "afuera",
-    RolTexto: "clásico",
-  },
-  {
-    dia: "09",
-    mes: "noviembre",
-    titulo: "Circuito de seven del interior",
-    detalles: "todo el día, club Puerto Norte, M9 a M15",
-    rol: "fiesta",
-    RolTexto: "todos juegan",
-  },
-];
-
+// Horarios: se confirman al inicio de cada temporada.
 export const horarios: Horario[] = [
-  { titulo: "Rugby superior", detalle: "lunes, miércoles y viernes a las 19:00" },
-  { titulo: "Escuela y juveniles", detalle: "lunes y miércoles a partir de las 17:30" },
-  { titulo: "Hockey", detalle: "martes y jueves a partir de las 19:00" },
-];
-
-export const figuras: Figura[] = [
   {
-    nombre: "Toto Ferreyra",
-    puesto: "capitán, segunda línea",
-    historia: "El último en salir del vestuario y el primero en el line. Llegó de M9 al club.",
-    foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/ST_vs_Harlequins_-_Thierry_Dusautoir_tackles_Nick_Evans.jpg/1280px-ST_vs_Harlequins_-_Thierry_Dusautoir_tackles_Nick_Evans.jpg",
+    titulo: "Rugby",
+    detalle: "horario por confirmar; preguntá en la secretaría o por WhatsApp",
   },
   {
-    nombre: "Julián Lagos",
-    puesto: "apertura",
-    historia: "68 puntos en el Apertura y contando. Cuando aprieta el partido, la pelota cae a su pie.",
-    foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Nick_Evans_Drop_Goal_%2810243147733%29.jpg/1280px-Nick_Evans_Drop_Goal_%2810243147733%29.jpg",
-  },
-  {
-    nombre: "Renata Orfila",
-    puesto: "media scrum, hockey",
-    historia: "Convocada a la selección regional y ayudante de la escuelita los domingos.",
-    foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/ST_vs_LOU_-_21.jpg/1280px-ST_vs_LOU_-_21.jpg",
-  },
-  {
-    nombre: "Cachito Duarte",
-    puesto: "head coach",
-    historia: "Nivel 3 de World Rugby. Ex puma, hoy al frente del proyecto 2026 a 2028.",
-    foto: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Garry_Law_kicks_at_goal.jpg",
+    titulo: "Hockey",
+    detalle: "horario por confirmar; preguntá en la secretaría o por WhatsApp",
   },
 ];
 
-export const galeria: { src: string; alto: boolean; larga: boolean; pie: string }[] = [
+// Galería: fotos ilustrativas, se van reemplazando por las del club.
+export const galeria: Foto[] = [
   {
     src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Ireland_vs_Romania_rugby_match.jpg/1280px-Ireland_vs_Romania_rugby_match.jpg",
-    alto: true, larga: false,
-    pie: "Cancha 1, un sábado cualquiera",
+    pie: "Partido un sábado (foto ilustrativa)",
   },
   {
     src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/2023_Rugby_World_Cup_warm-up_matches_-_Uruguay_vs_Chile_-_10.jpg/1280px-2023_Rugby_World_Cup_warm-up_matches_-_Uruguay_vs_Chile_-_10.jpg",
-    alto: false, larga: false,
-    pie: "La defensa no negocia",
+    pie: "Defensa en el tackle (foto ilustrativa)",
   },
   {
     src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Rovigo_campione_2023_rugby_%28no_watermark%29.jpg/1280px-Rovigo_campione_2023_rugby_%28no_watermark%29.jpg",
-    alto: true, larga: false,
-    pie: "El título del 2024, con el pueblo en la tribuna",
+    pie: "Después del partido (foto ilustrativa)",
   },
   {
     src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Rugby_Scrum_Roma_-_Benetton_Treviso_9_may_2009.jpg/1280px-Rugby_Scrum_Roma_-_Benetton_Treviso_9_may_2009.jpg",
-    alto: false, larga: false,
-    pie: "El pack, la fábrica del club",
+    pie: "Scrum (foto ilustrativa)",
   },
   {
     src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/England_rugby_training_at_bath_arp.jpg/1280px-England_rugby_training_at_bath_arp.jpg",
-    alto: false, larga: true,
-    pie: "Martes de trabajo, viernes de video",
+    pie: "Entrenamiento (foto ilustrativa)",
   },
   {
     src: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Perpignan_Lineout_Wasps_Perpignan.jpg/1280px-Perpignan_Lineout_Wasps_Perpignan.jpg",
-    alto: false, larga: true,
-    pie: "Subiendo por la pelota",
+    pie: "Line out (foto ilustrativa)",
   },
 ];

@@ -1,4 +1,4 @@
-import { encuentros, horarios } from "@/lib/datos";
+import { fixture, horarios } from "@/lib/datos";
 
 export const metadata = { title: "Cartelera" };
 
@@ -21,34 +21,34 @@ export default function Cartelera() {
               <span className="segunda">lo que viene</span>
             </h1>
             <div className="apertura__numeros">
-              <div><b>{encuentros.length}</b> fechas próximas en el fixture</div>
-              <div><b>3</b> líneas de colectivo te acercan al club</div>
+              <div><b>1</b> club, dos deportes</div>
+              <div><b>—</b> fechas por confirmar</div>
               <div><b>0</b> pesos la entrada si sos socio</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Fixture */}
+      {/* Fixture y horarios */}
       <section className="seccion">
         <div className="ancho">
           <div className="seccion__intro">
-            <h2>Fixture del club</h2>
-            <p>Cada fecha de local hay asado gracias a la comisión. Los horarios de práctica son referentes: si dudás, preguntá en la secretaría.</p>
+            <h2>Fixture y horarios</h2>
+            <p>
+              Cuando sale la programación del torneo, cargamos acá los partidos
+              con rivales, días y horarios. Los entrenamientos se confirman al
+              inicio de cada temporada.
+            </p>
           </div>
           <div className="pizarra">
-            {encuentros.map((e) => (
-              <article className="jornada" key={e.dia + e.mes}>
-                <div className="jornada__fecha"><b>{e.dia}</b><span>{e.mes}</span></div>
+            {fixture.map((e) => (
+              <article className="jornada" key={e.titulo}>
+                <div className="jornada__fecha"><b>—</b><span>{e.fecha}</span></div>
                 <div className="jornada__duelo">
-                  <strong>
-                    <span className="de-casa">{e.titulo.split(" contra ")[0]}</span>
-                    {" contra "}
-                    {e.titulo.split(" contra ")[1]}
-                  </strong>
-                  <small>{e.detalles}</small>
+                  <strong>{e.titulo}</strong>
+                  <small>{e.detalle}</small>
                 </div>
-                <span className={`jornada__rol ${e.rol}`}>{e.RolTexto}</span>
+                <span className="jornada__rol">{e.nota}</span>
               </article>
             ))}
           </div>

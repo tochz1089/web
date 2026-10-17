@@ -18,12 +18,12 @@ export default function ElClub() {
           <div className="ancho">
             <h1>
               El club
-              <span className="segunda">de barro y de años</span>
+              <span className="segunda">desde 1985</span>
             </h1>
             <div className="apertura__numeros">
               <div><b>1985</b> año de fundación</div>
-              <div><b>41</b> años en el mismo predio</div>
-              <div><b>2</b> colores de siempre: verde y amarillo</div>
+              <div><b>15 de marzo</b> la fecha exacta</div>
+              <div><b>2</b> colores: verde y amarillo</div>
             </div>
           </div>
         </div>
@@ -33,18 +33,17 @@ export default function ElClub() {
       <section className="seccion">
         <div className="ancho">
           <div className="seccion__intro">
-            <h2>Nacido en 1985</h2>
+            <h2>Historia</h2>
           </div>
           <p>
-            Las Cañas Rugby Club quedó fundado el 15 de marzo de 1985. Desde
-            entonces el cuadrante entre Carlos Pellegrini y Santa Cruz es casa:
-            ahí están las canchas, el tercer tiempo y los sábados del pueblo.
-            La secretaría funciona a pocas cuadras, en Santa Cruz 1101.
+            El club se fundó el 15 de marzo de 1985. Las canchas están en
+            Carlos Pellegrini y Santa Cruz y la secretaría funciona en Santa
+            Cruz 1101, Cañuelas.
           </p>
           <p>
-            El club juega afiliado a la URBA y forma jugadores en la cancha y
-            personas fuera de ella: la camiseta no se regala, se gana en los
-            entrenamientos.
+            El rugby compite por la URBA y el hockey se practica en el mismo
+            predio. Si querés jugar, tenés la página de inscripción con los
+            grupos disponibles.
           </p>
           <ul className="camisetas">
             <li>
@@ -166,10 +165,10 @@ export default function ElClub() {
       <section className="seccion vestuario">
         <div className="ancho">
           <div className="seccion__intro">
-            <h2>Vení a conocerlo</h2>
-            <p>Un sábado cualquiera alcanza: la tribuna es de todos.</p>
+            <h2>Vení a conocernos</h2>
+            <p>Acercate a la secretaría o escribí por WhatsApp; también podés dejar la inscripción completa.</p>
           </div>
-          <Link className="boton" href="/inscripciones">Dejar inscripción</Link>
+          <Link className="boton" href="/inscripciones">Ir a Inscripciones</Link>
         </div>
       </section>
     </main>

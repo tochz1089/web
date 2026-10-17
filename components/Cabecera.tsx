@@ -24,7 +24,7 @@ export default function Cabecera() {
           <Escudo />
           <span>
             <span className="club">Las Cañas Rugby Club</span>
-            <span className="anios">rugby y hockey · Cañuelas</span>
+            <span className="anios">rugby y hockey, Cañuelas</span>
           </span>
         </Link>
 

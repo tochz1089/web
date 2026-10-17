@@ -8,8 +8,8 @@ export default function Pie() {
           <div>
             <h4>Las Cañas Rugby Club</h4>
             <p>
-              Rugby y hockey de pueblo. Formamos jugadores para la vida,
-              no solo para el sábado.
+              Rugby y hockey en Cañuelas desde 1985. Info de siempre: fixture,
+              horarios, fotos y contacto.
             </p>
           </div>
           <div>

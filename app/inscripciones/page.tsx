@@ -27,9 +27,9 @@ export default function Inscripciones() {
               <span className="segunda">abiertas todo el año</span>
             </h1>
             <div className="apertura__numeros">
-              <div><b>1</b> clase gratis, sin compromiso</div>
+              <div><b>1</b> clase gratis para probar</div>
               <div><b>4</b> pasos para arrancar</div>
-              <div><b>48</b> horas para escribirte</div>
+              <div><b>Todos</b> rugby y hockey, chicos y adultos</div>
             </div>
           </div>
         </div>
@@ -42,31 +42,30 @@ export default function Inscripciones() {
             <div>
               <h2>Sumate al club</h2>
               <p>
-                Toda persona llega acompañada: si todavía no conocés a nadie, llená el
-                formulario y alguien de la subcomisión te recibe el primer día, te
-                presenta el grupo de tu edad y te mete en la práctica.
+                Llená el formulario con tus datos y alguien de la subcomisión te
+                escribe con el horario de tu primera práctica. Si tenés dudas
+                antes, podés preguntar por WhatsApp.
               </p>
 
               <ul className="promesas">
-                <li><span className="num" aria-hidden="true">1</span><span>Primera clase gratis, sin compromiso y sin cuota inicial</span></li>
-                <li><span className="num" aria-hidden="true">2</span><span>El primer mes jugás sin ficha médica; después la pedimos a tu médico de cabecera</span></li>
-                <li><span className="num" aria-hidden="true">3</span><span>Cuota social accesible, con becas para chicos y chicas de la escuela</span></li>
-                <li><span className="num" aria-hidden="true">4</span><span>Traé una fotocopia del DNI y, si sos mayor de edad, un teléfono de contacto</span></li>
+                <li><span className="num" aria-hidden="true">1</span><span>La primera clase es gratis, para probar</span></li>
+                <li><span className="num" aria-hidden="true">2</span><span>La ficha médica se pide después del primer mes</span></li>
+                <li><span className="num" aria-hidden="true">3</span><span>Cuota social con becas para quienes las necesiten</span></li>
+                <li><span className="num" aria-hidden="true">4</span><span>Pedimos fotocopia del DNI y un teléfono de contacto</span></li>
               </ul>
 
               <p>
-                La secretaría funciona en Santa Cruz 1101, Cañuelas (1814).
                 Escribinos por WhatsApp al 02226 15-609903 o a
                 clublascanas_rugbyhockey@hotmail.com y te respondemos en el día.
               </p>
               <p>
                 Las canchas están en Carlos Pellegrini y Santa Cruz: tren Línea
                 Roca desde Constitución, colectivos 88, 51 y 218, o autopista
-                Ezeiza-Cañuelas por ruta 3. El detalle punto a punto queda en
-                la página El club, sección “Cómo llegar”.
+                Ezeiza-Cañuelas por ruta 3. El detalle está en la página El club,
+                sección "Cómo llegar".
               </p>
               <p>
-                <Link className="boton" href="/">Volver a la home</Link>
+                <Link className="boton" href="/">Volver al inicio</Link>
               </p>
             </div>
 

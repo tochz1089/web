@@ -21,31 +21,30 @@ export default function Hockey() {
           <div className="ancho">
             <h1>
               Hockey
-              <span className="segunda">martes y jueves</span>
+              <span className="segunda">en el mismo predio</span>
             </h1>
             <div className="apertura__numeros">
               <div><b>2</b> grupos: escuelita y damas</div>
-              <div><b>19:00</b> {horarioHockey ? horarioHockey.detalle : "prácticas en el predio"}</div>
-              <div><b>1</b> cancha, el mismo predio del rugby</div>
+              <div><b>1</b> predio compartido con el rugby</div>
+              <div><b>1985</b> mismo club, mismo escudo</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Qué es el hockey del club */}
+      {/* El hockey del club */}
       <section className="seccion">
         <div className="ancho">
           <div className="seccion__intro">
-            <h2>El otro deporte grande</h2>
+            <h2>Escuelita y damas</h2>
             <p>
-              El hockey creció junto al rugby en el mismo predio de Cañuelas.
-              Las más chicas arrancan en la escuelita con palos livianos y juego;
-              las damas compiten los fines de semana con el mismo escudo en la
-              camiseta a cuadros.
+              El hockey se practica en el predio de Carlos Pellegrini y Santa
+              Cruz, con escuelita para las más chicas y equipos de damas.
+              {horarioHockey ? " " + horarioHockey.detalle.charAt(0).toUpperCase() + horarioHockey.detalle.slice(1) + "." : ""}
             </p>
             <p>
-              No hace falta experiencia: llegá una martes o un jueves y probá
-              una clase completa. Después te contamos cómo seguir.
+              No hace falta experiencia previa: vení a probar una clase y de ahí
+              te contamos cómo seguir.
             </p>
           </div>
         </div>
@@ -88,7 +87,7 @@ export default function Hockey() {
         <div className="ancho">
           <div className="seccion__intro">
             <h2>Sumate al hockey</h2>
-            <p>Escuelita y damas: la primera clase es gratis y el palo, lo ponemos nosotros.</p>
+            <p>La primera clase es gratis. Dejá tus datos y te escribimos.</p>
           </div>
           <Link className="boton" href="/inscripciones">Dejar inscripción</Link>
         </div>

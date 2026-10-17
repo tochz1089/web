@@ -1,11 +1,8 @@
 import Link from "next/link";
-import { encuentros } from "@/lib/datos";
 
 export const metadata = { title: "Inicio" };
 
 export default function Home() {
-  const proximo = encuentros[0];
-
   return (
     <main id="juego">
       {/* Portada de bienvenida */}
@@ -24,20 +21,14 @@ export default function Home() {
               <span className="segunda">al club</span>
             </h1>
 
-            <Link className="apertura__cartel" href="/cartelera">
-              <div className="lado">
-                <span className="rival">Próximo partido: {proximo.titulo}</span>
-                <span className="detalle">Tocá para ver la cartelera completa</span>
-              </div>
-              <div className="dia">
-                <b>{proximo.dia} {proximo.mes}</b>
-                <span>{proximo.detalles}</span>
-              </div>
-            </Link>
+            <p className="apertura__proxima">
+              Próximo partido: por definir.{" "}
+              <Link href="/cartelera">Ver cartelera</Link>
+            </p>
 
             <div className="apertura__numeros">
               <div><b>1985</b> año de fundación</div>
-              <div><b>41</b> años de historia en el mismo predio</div>
+              <div><b>41</b> años en el mismo predio</div>
               <div><b>2</b> deportes: rugby y hockey</div>
             </div>
           </div>
@@ -53,8 +44,8 @@ export default function Home() {
             loading="lazy"
           />
           <h2>Rugby</h2>
-          <p>De la escuelita al plantel superior: fixture, resultados y toda la escuelita del club, sábados en la cancha.</p>
-          <span className="atravesar">Ver rugby</span>
+          <p>Escuelita, juveniles y plantel superior. Resultados, fixture y fotos.</p>
+          <span className="atravesar">Ver la página de rugby</span>
         </Link>
         <Link className="disco disco--hockey" href="/hockey">
           <img
@@ -63,8 +54,8 @@ export default function Home() {
             loading="lazy"
           />
           <h2>Hockey</h2>
-          <p>Escuelita y damas, martes y jueves: horarios y cómo sumar la parte para el grupo del deporte.</p>
-          <span className="atravesar">Ver hockey</span>
+          <p>Escuelita y damas, en el mismo predio del club.</p>
+          <span className="atravesar">Ver la página de hockey</span>
         </Link>
       </div>
 
@@ -72,14 +63,15 @@ export default function Home() {
       <section className="seccion">
         <div className="ancho">
           <div className="seccion__intro">
-            <h2>Un club de barrio</h2>
+            <h2>Quiénes somos</h2>
             <p>
-              Fundado el 15 de marzo de 1985 en Cañuelas, juega el rugby afiliado a la
-              URBA. La historia completa del club, la comisión y cómo llegar a las
-              canchas están en su propia página.
+              Las Cañas Rugby Club es un club de Cañuelas, fundado el 15 de marzo
+              de 1985. Las canchas están en Carlos Pellegrini y Santa Cruz, y la
+              secretaría en Santa Cruz 1101. La historia completa, las autoridades
+              y cómo llegar están en la página El club.
             </p>
           </div>
-          <Link className="boton" href="/el-club">Conocer el club</Link>
+          <Link className="boton" href="/el-club">Ir a El club</Link>
         </div>
       </section>
 
@@ -87,8 +79,11 @@ export default function Home() {
       <section className="seccion vestuario">
         <div className="ancho">
           <div className="seccion__intro">
-            <h2>Anotate en un minuto</h2>
-            <p>La primera clase es gratis, para rugby y para hockey, de chicos a mayores.</p>
+            <h2>¿Querés jugar?</h2>
+            <p>
+              La primera clase es gratis, para rugby y para hockey. Dejá tus datos
+              y alguien del club te escribe con los horarios.
+            </p>
           </div>
           <Link className="boton" href="/inscripciones">Dejar inscripción</Link>
         </div>
