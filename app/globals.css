@@ -488,6 +488,7 @@
 
     /* ---------- Ramas ---------- */
     .bandas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.1rem; }
+    .bandas--dos { grid-template-columns: repeat(2, 1fr); }
     .banda {
       position: relative;
       display: grid;

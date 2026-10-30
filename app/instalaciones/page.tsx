@@ -59,8 +59,8 @@ export default function Instalaciones() {
             </figure>
             <figure>
               <img
-                src="/hockey.jpg"
-                alt="Jugadoras de hockey en la cancha del club."
+                src="/fotos/temporada/hk-cancha.jpg"
+                alt="La cancha de hockey del club, con la tribuna y los cartelones al fondo."
                 loading="lazy"
               />
               <figcaption>El hockey, en el mismo predio.</figcaption>

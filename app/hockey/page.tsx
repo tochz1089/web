@@ -12,8 +12,8 @@ export default function Hockey() {
       <section className="apertura">
         <div className="apertura__fondo">
           <img
-            src="/hockey.jpg"
-            alt="Una jugadora de hockey del club conduciendo la pelota en césped sintético."
+            src="/fotos/temporada/hk-tribuna.jpg"
+            alt="La tribuna del hockey alentando desde el borde de la cancha, en un partido de damas."
             fetchPriority="high"
           />
         </div>
@@ -38,8 +38,8 @@ export default function Hockey() {
           <div className="seccion__intro">
             <h2>Escuelita y damas</h2>
             <p>
-              El hockey se practica en el predio de Carlos Pellegrini y Santa
-              Cruz, con escuelita para las más chicas y equipos de damas.
+              El hockey se juega en la cancha de Pellegrini y Santa Cruz, en el
+              mismo predio que el rugby.
               {horarioHockey ? " " + horarioHockey.detalle.charAt(0).toUpperCase() + horarioHockey.detalle.slice(1) + "." : ""}
             </p>
             <p>
@@ -47,36 +47,75 @@ export default function Hockey() {
               te contamos cómo seguir.
             </p>
           </div>
+
+          <div className="bandas bandas--dos">
+            <Link className="banda" href="/inscripciones">
+              <img
+                src="/fotos/temporada/hk-chicas.jpg"
+                alt="Las chicas del hockey, formadas en la cancha del club."
+                loading="lazy"
+              />
+              <div>
+                <div className="grupo">las más chicas</div>
+                <h3>Escuelita</h3>
+                <p>Primeros palos y primeros juegos, dentro del club.</p>
+              </div>
+            </Link>
+            <Link className="banda" data-categoria="femenino" href="/inscripciones">
+              <img
+                src="/fotos/temporada/hk-damas.jpg"
+                alt="El plantel de damas posando junto en la cancha."
+                loading="lazy"
+              />
+              <div>
+                <div className="grupo">primer equipo</div>
+                <h3>Damas</h3>
+                <p>Competencia de la temporada, adentro y de visita.</p>
+              </div>
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Fotos */}
       <section className="seccion">
         <div className="ancho">
-          <div className="album">
-            <figure className="larga">
+          <div className="seccion__intro">
+            <h2>Fotos</h2>
+            <p>Un día de hockey en el predio, sacado desde la tribuna.</p>
+          </div>
+          <div className="posteres">
+            <figure>
               <img
-                src="/hockey.jpg"
-                alt="Jugadora del club peleando la pelota adelante del arco."
+                src="/fotos/temporada/hk-pase.jpg"
+                alt="Dos jugadoras del club corriendo detrás de la pelota, en la cancha de Pellegrini y Santa Cruz."
                 loading="lazy"
               />
-              <figcaption>Ataque en el área, partido de damas.</figcaption>
+              <figcaption>La salida, partido de damas.</figcaption>
             </figure>
             <figure>
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Dutch_Women_Hockey_-_Shielding_the_ball.jpg/1280px-Dutch_Women_Hockey_-_Shielding_the_ball.jpg"
-                alt="Jugadora protegiendo la pelota. Foto ilustrativa."
+                src="/fotos/temporada/hk-velocidad.jpg"
+                alt="Una jugadora del club acelerando con la pelota pegada al palo."
                 loading="lazy"
               />
-              <figcaption>Foto ilustrativa.</figcaption>
+              <figcaption>La velocidad, subiendo por la punta.</figcaption>
             </figure>
             <figure>
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/CNU_vs_HC%2C_Field_Hockey_%288150454054%29.jpg/1280px-CNU_vs_HC%2C_Field_Hockey_%288150454054%29.jpg"
-                alt="Partido de hockey césped. Foto ilustrativa."
+                src="/fotos/temporada/hk-corto.jpg"
+                alt="El corner corto del club, con la arquera esperando en el arco."
                 loading="lazy"
               />
-              <figcaption>Foto ilustrativa.</figcaption>
+              <figcaption>El corner corto, con la arquera lista.</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="/fotos/temporada/hk-abrazo.jpg"
+                alt="El equipo del club abrazándose después de un gol."
+                loading="lazy"
+              />
+              <figcaption>El abrazo del gol.</figcaption>
             </figure>
           </div>
         </div>
