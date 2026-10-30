@@ -101,7 +101,7 @@ export default function Rugby() {
               <div>
                 <div className="grupo">del M5 al M13</div>
                 <h3>Escuelita</h3>
-                <p>Juego y fundamentos; el primer tackle llega con tiempo.</p>
+                <p>Rugby y hockey infantil: juego y fundamentos en el mismo predio.</p>
               </div>
             </Link>
             <Link className="banda" data-categoria="juveniles" href="/inscripciones">
@@ -119,12 +119,12 @@ export default function Rugby() {
             <Link className="banda" data-categoria="superior" href="/inscripciones">
               <img
                 src="/fotos/temporada/banda-primera.jpg"
-                alt="El abridor de la Primera pateando a los palos, en un partido de local."
+                alt="El abridor del plantel superior pateando a los palos, en un partido de local."
                 loading="lazy"
               />
               <div>
                 <div className="grupo">plantel superior</div>
-                <h3>Primera</h3>
+                <h3>Superior</h3>
                 <p>El equipo que representa al club en la URBA.</p>
               </div>
             </Link>
@@ -139,13 +139,12 @@ export default function Rugby() {
             <h2>Fotos</h2>
             <p>
               Fotos reales de la temporada, sacadas por Gui Sanabria PH en cada
-              partido (Pre, Intermedias y Primera). Recién dejamos de usar fotos
-              ilustrativas.
+              partido: Pre, Intermedias y Primera.
             </p>
           </div>
-          <div className="album">
+          <div className="posteres">
             {galeria.map((g) => (
-              <figure key={g.src} className={g.clase ?? ""}>
+              <figure key={g.src}>
                 <img src={g.src} alt={g.pie} loading="lazy" />
                 <figcaption>{g.pie}</figcaption>
               </figure>

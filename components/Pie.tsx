@@ -43,16 +43,10 @@ export default function Pie() {
           </div>
         </div>
         <div className="ultimo__legal">
-          <p style={{ margin: 0 }}>© 2026 Las Cañas Rugby Club, sitio de demostración.</p>
-          <details>
-            <summary>Créditos y fotos</summary>
-            <p style={{ margin: ".6rem 0 0" }}>
-              Fotos del club: Gui Sanabria (PH). Las fotos del plantel y de la
-              galería que aún no son del club son imágenes ilustrativas de
-              Wikimedia Commons, con licencias libres; se van a reemplazar
-              por material propio a medida que llegue.
-            </p>
-          </details>
+          <p style={{ margin: 0 }}>© 2026 Las Cañas Rugby Club.</p>
+          <p style={{ margin: ".6rem 0 0" }}>
+            Fotos de la temporada: Gui Sanabria (PH).
+          </p>
         </div>
       </div>
     </footer>

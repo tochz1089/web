@@ -56,7 +56,7 @@ export default function FormularioInscripcion() {
 
       <p className="aviso">
         {estado === "esperando"
-          ? "Tus datos no salen del club. Formulario de demostración."
+          ? "Tus datos no salen del club."
           : "Inscripción recibida."}
       </p>
 

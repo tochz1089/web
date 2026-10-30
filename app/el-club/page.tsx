@@ -64,7 +64,7 @@ export default function ElClub() {
       <section className="seccion vestuario" id="autoridades">
         <div className="ancho">
           <div className="seccion__intro">
-            <h2>Quiénes están al frente</h2>
+            <h2>Directiva</h2>
             <p>La comisión que ordena el club y el cuerpo técnico que conduce la cancha.</p>
           </div>
           <div className="autoridades">
