@@ -18,6 +18,7 @@ export default function Pie() {
               <li><Link href="/rugby">Rugby</Link></li>
               <li><Link href="/hockey">Hockey</Link></li>
               <li><Link href="/cartelera">Cartelera</Link></li>
+              <li><Link href="/instalaciones">Instalaciones</Link></li>
               <li><Link href="/el-club">El club</Link></li>
               <li><Link href="/inscripciones">Inscripciones</Link></li>
             </ul>

@@ -147,6 +147,8 @@
       padding: clamp(2.5rem, 7vw, 5rem) 0 clamp(2.2rem, 5vw, 3.5rem);
       color: var(--cal);
     }
+    /* Hero sin foto: fondo verde de cancha */
+    .apertura--tinta { background: var(--cancha); }
     .apertura h1 {
       font-size: clamp(2.8rem, 8vw, 5.6rem);
       color: var(--cal);
@@ -752,8 +754,7 @@
       mix-blend-mode: multiply; /* el escudo va sin caja blanca encima del fondo */
     }
 
-    /* ---------- Próximo partido en la portada ---------- */
-    .apertura__proxima {
+    /* ---------- Próximo partido en la portada ---------- */    .apertura__proxima {
       margin: 1.4rem 0 0;
       font-size: .95rem;
       color: rgb(247 245 236 / .8);

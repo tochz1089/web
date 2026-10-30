@@ -10,6 +10,7 @@ const secciones = [
   { etiqueta: "Rugby", ruta: "/rugby" },
   { etiqueta: "Hockey", ruta: "/hockey" },
   { etiqueta: "Cartelera", ruta: "/cartelera" },
+  { etiqueta: "Instalaciones", ruta: "/instalaciones" },
   { etiqueta: "El club", ruta: "/el-club" },
 ];
 
