@@ -9,8 +9,8 @@ export default function Cartelera() {
       <section className="apertura">
         <div className="apertura__fondo">
           <img
-            src="/portada.jpg"
-            alt="El pack de Las Cañas empujando un scrum, con la tribuna detrás."
+            src="/fotos/temporada/p-rugby.jpg"
+            alt="El plantel superior de Las Cañas en pleno tackle."
             fetchPriority="high"
           />
         </div>

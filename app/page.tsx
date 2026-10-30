@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { cinta } from "@/lib/datos";
 
 export const metadata = { title: "Inicio" };
 
@@ -9,8 +10,8 @@ export default function Home() {
       <section className="apertura">
         <div className="apertura__fondo">
           <img
-            src="/portada.jpg"
-            alt="El pack de Las Cañas empujando un scrum, con la tribuna detrás."
+            src="/fotos/temporada/h-rugby.jpg"
+            alt="Un jugador de Las Cañas ataca corriendo con la pelota, en un partido de Primera."
             fetchPriority="high"
           />
         </div>
@@ -39,8 +40,8 @@ export default function Home() {
       <div className="disciplinas">
         <Link className="disco" href="/rugby">
           <img
-            src="/portada.jpg"
-            alt="El pack de Las Cañas formando scrum."
+            src="/fotos/temporada/p-rugby.jpg"
+            alt="El tackle del plantel superior, sacado en plena jugada."
             loading="lazy"
           />
           <h2>Rugby</h2>
@@ -58,6 +59,22 @@ export default function Home() {
           <span className="atravesar">Ver la página de hockey</span>
         </Link>
       </div>
+
+      {/* Cinta de fotos de la temporada */}
+      <section className="cinta" aria-label="Fotos de la temporada">
+        <div className="cinta__pista">
+          {[...cinta, ...cinta].map((src, i) => (
+            <img
+              key={i}
+              src={src}
+              alt=""
+              loading="lazy"
+              aria-hidden={i >= cinta.length}
+            />
+          ))}
+        </div>
+        <p className="cinta__credito">Fotos de la temporada: Gui Sanabria PH</p>
+      </section>
 
       {/* Info mínima + acceso al club */}
       <section className="seccion">

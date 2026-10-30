@@ -12,8 +12,8 @@ export default function Rugby() {
       <section className="apertura">
         <div className="apertura__fondo">
           <img
-            src="/portada.jpg"
-            alt="El pack de Las Cañas empujando un scrum, con la tribuna detrás."
+            src="/fotos/temporada/g15-huddle-oldg.jpg"
+            alt="Los del club formados en el huddle, sobre la mitad de la cancha."
             fetchPriority="high"
           />
         </div>
@@ -94,8 +94,8 @@ export default function Rugby() {
           <div className="bandas">
             <Link className="banda" href="/inscripciones">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Schoolkids_doing_a_rugby_tackle.jpg/1280px-Schoolkids_doing_a_rugby_tackle.jpg"
-                alt="Chicos practicando tackle. Foto ilustrativa."
+                src="/fotos/temporada/c9-lasalle2.jpg"
+                alt="Un chico del club abre el juego con el pie, en un partido de local."
                 loading="lazy"
               />
               <div>
@@ -106,8 +106,8 @@ export default function Rugby() {
             </Link>
             <Link className="banda" data-categoria="juveniles" href="/inscripciones">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Bond_Rugby_%2813373623165%29.jpg/1280px-Bond_Rugby_%2813373623165%29.jpg"
-                alt="Juveniles corriendo con la pelota. Foto ilustrativa."
+                src="/fotos/temporada/banda-juveniles.jpg"
+                alt="Los juveniles del club, sonriendo en la puerta del casillero."
                 loading="lazy"
               />
               <div>
@@ -118,8 +118,8 @@ export default function Rugby() {
             </Link>
             <Link className="banda" data-categoria="superior" href="/inscripciones">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Homeboyz_Rugby_celebrate_winning_the_Enterprise_Cup.jpg"
-                alt="Equipo celebrando con la copa. Foto ilustrativa."
+                src="/fotos/temporada/banda-primera.jpg"
+                alt="El abridor de la Primera pateando a los palos, en un partido de local."
                 loading="lazy"
               />
               <div>
@@ -137,11 +137,15 @@ export default function Rugby() {
         <div className="ancho">
           <div className="seccion__intro">
             <h2>Fotos</h2>
-            <p>Estas son ilustrativas: se van a ir cambiando por fotos reales del club.</p>
+            <p>
+              Fotos reales de la temporada, sacadas por Gui Sanabria PH en cada
+              partido (Pre, Intermedias y Primera). Recién dejamos de usar fotos
+              ilustrativas.
+            </p>
           </div>
           <div className="album">
             {galeria.map((g) => (
-              <figure key={g.pie}>
+              <figure key={g.src} className={g.clase ?? ""}>
                 <img src={g.src} alt={g.pie} loading="lazy" />
                 <figcaption>{g.pie}</figcaption>
               </figure>

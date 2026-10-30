@@ -15,8 +15,8 @@ export default function Inscripciones() {
       <section className="apertura">
         <div className="apertura__fondo">
           <img
-            src="/equipo.jpg"
-            alt="Dos equipos en ronda charlando antes de jugar en el predio."
+            src="/fotos/temporada/g14-abrazos-lasalle.jpg"
+            alt="Un grupo de jugadores del club, tomados del hombro y sonriendo."
             fetchPriority="high"
           />
         </div>

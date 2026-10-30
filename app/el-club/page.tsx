@@ -9,8 +9,8 @@ export default function ElClub() {
       <section className="apertura">
         <div className="apertura__fondo">
           <img
-            src="/equipo.jpg"
-            alt="Dos equipos en ronda charlando antes de jugar en el predio."
+            src="/fotos/temporada/g16-premios-varela.jpg"
+            alt="Los jugadores del club tomados del hombro, charlando en la cancha."
             fetchPriority="high"
           />
         </div>

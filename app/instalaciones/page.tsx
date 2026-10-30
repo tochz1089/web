@@ -36,11 +36,11 @@ export default function Instalaciones() {
           <div className="album">
             <figure className="larga">
               <img
-                src="/equipo.jpg"
-                alt="El predio del club con las tribunas de madera y los equipos en ronda."
+                src="/fotos/temporada/g15-huddle-oldg.jpg"
+                alt="El huddle pre-partido en la cancha de Pellegrini y Santa Cruz, con los árboles detrás."
                 loading="lazy"
               />
-              <figcaption>El predio, con los equipos charlando antes de jugar.</figcaption>
+              <figcaption>El huddle de antes del partido, en la cancha principal.</figcaption>
             </figure>
             <figure>
               <img
