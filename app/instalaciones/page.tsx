@@ -5,8 +5,15 @@ export const metadata = { title: "Instalaciones" };
 export default function Instalaciones() {
   return (
     <main id="juego">
-      {/* Portada tipográfica */}
-      <section className="apertura apertura--tinta">
+      {/* Portada con la vista aérea del predio */}
+      <section className="apertura">
+        <div className="apertura__fondo">
+          <img
+            src="/fotos/temporada/predio-noche.jpg"
+            alt="Vista aérea del predio de noche: la cancha de hockey iluminada con el entrenamiento en curso."
+            fetchPriority="high"
+          />
+        </div>
         <div className="apertura__tarjeta">
           <div className="ancho">
             <h1>
